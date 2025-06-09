@@ -1,0 +1,39 @@
+<!-- Logout Button -->
+ <div class="logout-container">
+<button class="logout-btn" (click)="logout()">Logout</button>
+</div>
+<div class="table-responsive">
+  <table *ngIf="users.length > 0">
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Qualification</th>
+      <th>Action</th>
+    </tr>
+    <tr *ngFor="let user of users; let i = index">
+      <ng-container *ngIf="editIndex !== i; else editMode">
+        <td>{{ user.id }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.age }}</td>
+        <td>{{ user.qualification }}</td>
+        <td>
+          <button (click)="onEdit(i)">Edit</button>
+          <button class="delete-btn" (click)="onDelete(user.id)">Delete</button>
+        </td>
+      </ng-container>
+      <ng-template #editMode>
+        <td>{{ user.id }}</td>
+        <td><input [(ngModel)]="users[i].name" /></td>
+        <td><input type="number" [(ngModel)]="users[i].age" /></td>
+        <td><input [(ngModel)]="users[i].qualification" /></td>
+        <td>
+        
+          
+          <button (click)="onUpdate(i)">Update</button>
+          <button (click)="onCancel()">Cancel</button>
+        </td>
+      </ng-template>
+    </tr>
+  </table>
+</div>

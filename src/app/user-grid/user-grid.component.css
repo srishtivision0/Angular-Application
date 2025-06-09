@@ -1,0 +1,84 @@
+
+.logout-container {
+  text-align: right;
+}
+/* Logout Button Styling */
+.logout-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  align-items: right;
+}
+
+/* Responsive wrapper */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 20px 0;
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+  font-family: Arial, sans-serif;
+}
+
+th, td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background-color: #007BFF;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Button style */
+button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  margin: 2px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #b36500;
+}
+button.delete-btn {
+  background-color: #dc3545;
+}
+
+button.delete-btn:hover {
+  background-color: #c82333;
+}
+
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  table {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  input {
+    width: 100%;
+  }
+}

@@ -1,0 +1,24 @@
+<h2 style="text-align: center;">Login User Panel -ANG</h2>
+<div class="form-container">
+  <form (ngSubmit)="login()" #loginForm="ngForm">
+    <input
+      type="number"
+      name="id"
+      [(ngModel)]="loginData.id"
+      placeholder="Enter ID"
+      required
+    />
+    <input
+      type="text"
+      name="name"
+      [(ngModel)]="loginData.name"
+      placeholder="Enter Name"
+      required
+    />
+    <button type="submit" [disabled]="isLoading">
+      {{ isLoading ? 'Logging in...' : 'Login' }}
+    </button><br><br>
+    
+  </form>
+  <button (click)="goToRegister()" type="Register">Register Now!</button>
+</div>
